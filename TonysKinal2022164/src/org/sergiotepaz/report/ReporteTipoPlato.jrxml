@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTipoPlato" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9ebb1a5-2905-4557-b724-4f4cc2704f6b">
+	<property name="ireport.zoom" value="1.4641000000000017"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="100"/>
+	<queryString>
+		<![CDATA[call sp_ListarTipoPlato()]]>
+	</queryString>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" backcolor="#F3AC0D" uuid="2fba8bdc-6e34-43de-9ad3-398cab507a37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="234" y="29" width="128" height="27" uuid="8782a9ba-e0df-467d-a059-043ef4f427b0"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="20" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" backcolor="#C1691C" uuid="44fe6e59-0021-41e2-8e59-694e9f1901e6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="21" width="158" height="20" uuid="739ff2d2-09ff-4df4-965b-31c89bbe238e"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Tipo Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="21" width="100" height="20" uuid="19333964-1554-47db-a832-4d52e39b4903"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-1" width="555" height="47" backcolor="#F3AC0D" uuid="a8ae6fab-cd67-436d-b864-e471de9bba44"/>
+			</rectangle>
+			<textField>
+				<reportElement x="40" y="15" width="122" height="20" uuid="f3be26a7-1c02-426e-a432-96c8d9ff5aac"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoTipoPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="15" width="187" height="20" uuid="ead26440-beda-4c9b-8250-87aafed01fdc"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

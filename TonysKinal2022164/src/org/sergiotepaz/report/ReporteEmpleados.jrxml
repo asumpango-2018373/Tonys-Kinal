@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpleados" language="groovy" pageWidth="1050" pageHeight="842" columnWidth="1010" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a0ff99d-88b0-4e99-a5e8-bbe73cc465f3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="11"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpleados;]]>
+	</queryString>
+	<field name="codigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gradoCocinero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="1010" height="79" backcolor="#F3AC0D" uuid="89c09662-fa87-4e83-b81c-c1b2bc2bd96f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="465" y="27" width="99" height="24" uuid="40e1f46a-110d-4abe-97c4-647e97e2d3db"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="1010" height="61" backcolor="#C1691C" uuid="5e200b82-b89c-4fb2-9334-f8f8c49eafbd"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="27" width="125" height="20" uuid="193e7748-34b9-4192-9967-d7a33f702b3b"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código de Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="27" width="132" height="20" uuid="9985b4fc-b065-4428-87c4-725496a16018"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="27" width="57" height="20" uuid="8428eff6-847d-428c-a09d-15649737f2e1"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="27" width="57" height="20" uuid="1265fe5a-6b14-458d-91ae-e0308d0dbbd8"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="552" y="27" width="55" height="20" uuid="b0688931-c074-4a6c-bd46-0b9c7938fd13"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="679" y="27" width="51" height="20" uuid="6798221d-f9d7-4a4e-b355-0f3acb65eceb"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="774" y="27" width="89" height="20" uuid="e5dc4b19-96d9-4b02-adb3-420434ca3085"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado Cocinero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="874" y="27" width="136" height="20" uuid="16be0436-0443-4d6e-894a-a4762874bdde"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Tipo Empleado]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="1010" height="46" backcolor="#F3AC0D" uuid="3e3104e2-fbcb-42e1-9109-6de8c2f8bbc4"/>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="26" width="100" height="20" uuid="26f6def9-9260-4753-ba2d-3ee03d5ed14b"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="26" width="94" height="20" uuid="d81072f7-4f8d-4bc8-9f83-90b2f0d717ec"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="26" width="100" height="20" uuid="f873f5a3-dc5b-4403-b6fe-96c62bcafdc1"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidosEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="26" width="121" height="20" uuid="2cc8b0cd-4ae2-43f0-9b21-f6b4cb72ebdf"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombresEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="524" y="26" width="132" height="20" uuid="44b9e04f-017a-430b-9568-d034e5478ebf"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccionEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="668" y="26" width="89" height="20" uuid="69b8e15b-5af2-4587-a1c5-76fc8bf628db"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="774" y="27" width="100" height="20" uuid="bf0033ba-ff76-4621-83f8-1aec6b22de98"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gradoCocinero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="886" y="26" width="109" height="20" uuid="0ebdaf13-7ba1-43b8-bc4d-a38f15751627"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoTipoEmpleado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

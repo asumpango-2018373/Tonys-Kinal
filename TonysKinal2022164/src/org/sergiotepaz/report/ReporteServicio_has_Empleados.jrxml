@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicio_has_Empleados" language="groovy" pageWidth="850" pageHeight="842" columnWidth="810" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="67de91a0-796a-4c18-a340-af7bd80f7aa7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarServicios_has_Empleados]]>
+	</queryString>
+	<field name="Servicios_codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaEvento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEvento" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarEvento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="810" height="79" backcolor="#F3AC0D" uuid="9c1cde2e-81c5-458b-960b-d64b7fb33d13"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="355" y="27" width="99" height="24" uuid="81c39c13-0094-4e2f-8ea8-96c0a49c4025"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="810" height="61" backcolor="#C1691C" uuid="d6ced5ed-c8ad-4330-9fb8-7ce6e1d89731"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="23" y="23" width="156" height="20" uuid="30a21919-1ca8-4536-ab1f-e607dbdeaf55"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servicios - Código Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="23" width="100" height="20" uuid="521820ae-ad65-469a-862b-3796c4dfa094"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="23" width="110" height="20" uuid="ec1852d0-b2a4-4723-a97f-19fda0f0f321"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="23" width="100" height="20" uuid="80cd5b4b-527d-4926-b9dd-01d00f3d9547"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha del Evento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="589" y="23" width="100" height="20" uuid="19d3088d-626c-4fb0-8993-8beb40899fa6"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora del evento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="710" y="23" width="100" height="20" uuid="7c1cc9a2-6757-41ed-b720-a8eef8ddbb0d"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar del evento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="810" height="42" backcolor="#F3AC0D" uuid="e25d145f-a75f-4915-a51d-67b1369c3321"/>
+			</rectangle>
+			<textField>
+				<reportElement x="23" y="11" width="142" height="20" uuid="f6bdf5b8-5fac-40c3-bbee-533225a469c1"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Servicios_codigoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="11" width="100" height="20" uuid="6db33448-c306-4e7e-a70b-6b001a17fa4c"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="11" width="110" height="20" uuid="7ec0c2e7-399f-43a1-b92c-cffde957a92b"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="454" y="11" width="100" height="20" uuid="27df8b7e-6a58-4c2f-8513-7de5843831d7"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaEvento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="589" y="11" width="100" height="20" uuid="4f8088a1-295f-4763-98f5-028f6b0db88f"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaEvento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="710" y="11" width="100" height="20" uuid="03801857-3341-4411-8e5e-a216db486e40"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarEvento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

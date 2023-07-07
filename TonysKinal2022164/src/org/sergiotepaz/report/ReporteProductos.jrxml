@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteProductos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e91e0794-ceee-4b2e-88b9-afb759b8a174">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarProductos;]]>
+	</queryString>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="79" backcolor="#F3AC0D" uuid="3409b105-ebaa-4003-8640-fa938049e03f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="241" y="31" width="99" height="24" uuid="ffb88261-6580-4080-8344-50123c7c2363"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="61" backcolor="#C1691C" uuid="1659ada8-7dd5-43f2-af36-9df983228d75"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="32" y="22" width="100" height="20" uuid="7b966596-c9ac-43df-9825-272cee3c10ed"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="22" width="129" height="20" uuid="ca93b5cc-fc77-411e-83b0-282145854e2f"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="22" width="134" height="20" uuid="57d838a6-49ac-47ec-9b8d-332bacda2675"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="46" backcolor="#F3AC0D" uuid="e44c6e81-76e0-4b17-88c1-ea63bffc80d2"/>
+			</rectangle>
+			<textField>
+				<reportElement x="32" y="26" width="100" height="20" uuid="15d0490c-651b-4721-8f65-d858ef98c45f"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="27" width="116" height="20" uuid="48a6cf4e-c035-4cd3-89c8-c2d3cadba75d"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="27" width="124" height="20" uuid="09539692-170b-4726-9d1b-2f36cbf879e3"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadProducto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="46" width="572" height="1" uuid="ada7ec3e-3adb-433c-9db1-e6c3c76a888f"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

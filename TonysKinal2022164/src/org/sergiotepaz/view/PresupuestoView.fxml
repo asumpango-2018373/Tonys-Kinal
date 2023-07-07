@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #f29626;" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergiotepaz.controller.PresupuestoController">
+   <children>
+      <ImageView fitHeight="613.0" fitWidth="808.0" layoutY="200.0" pickOnBounds="true" style="-fx-opacity: 0.1;">
+         <image>
+            <Image url="@../image/fondo%20plantilla.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: #a85019;">
+         <children>
+            <Pane layoutX="20.0" layoutY="75.0" prefHeight="37.0" prefWidth="761.0" style="-fx-background-color: #f3ac0d; -fx-background-radius: 40 40;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="318.0" layoutY="3.0" text="Presupuesto" textFill="#8f4314">
+                     <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox layoutX="17.0" layoutY="143.0" prefHeight="35.0" prefWidth="761.0" spacing="80.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="140.0" styleClass="button1" text="Nuevo" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="140.0" styleClass="button1" text="Eliminar" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="30.0" prefWidth="140.0" styleClass="button1" text="Editar" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="30.0" prefWidth="140.0" styleClass="button1" text="Reporte" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/reportar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fx:id="imgHome" fitHeight="37.0" fitWidth="44.0" layoutX="20.0" layoutY="22.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/home2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgHome1" fitHeight="44.0" fitWidth="44.0" layoutX="734.0" layoutY="18.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/dinero.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="94.0" layoutY="22.0" onMouseClicked="#ventanaEmpresa" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="grpFecha" layoutX="7.0" layoutY="226.0" prefHeight="104.0" prefWidth="786.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="162.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="174.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="162.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="337.0" minWidth="10.0" prefWidth="283.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="37.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="Código Presupuesto">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="Fecha de solicitud" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="Código Empresa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoPresupuesto" editable="false" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="cmbCodigoEmpresa" prefHeight="25.0" prefWidth="304.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" text="Cantidad Presupuesto" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCantidadPresupuesto" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblPresupuestos" layoutX="14.0" layoutY="332.0" onMouseClicked="#seleccionarElemento" prefHeight="350.0" prefWidth="780.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPresupuesto" prefWidth="111.0" text="Cod. Presupuesto" />
+          <TableColumn fx:id="colFechaSolicitud" prefWidth="255.0" text="Fecha de solicitud" />
+            <TableColumn fx:id="colCantidadPresupuesto" prefWidth="193.0" text="Cantidad Presupuesto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="220.0" text="Código Empresa" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

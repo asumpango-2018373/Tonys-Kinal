@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergiotepaz.controller.LoginController">
+   <children>
+      <Pane layoutX="308.0" prefHeight="500.0" prefWidth="396.0" style="-fx-background-color: #f3ac0d;">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="100.0" layoutX="157.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/lock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="152.0" layoutY="132.0" text="User Login">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" layoutX="101.0" layoutY="218.0" opacity="0.6" prefHeight="25.0" prefWidth="232.0" promptText="User" styleClass="custom-textfield" stylesheets="@../resource/TonysKinal.css">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="63.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="66.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/key.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="lblRegistro" layoutX="151.0" layoutY="453.0" onAction="#ventanaUsuario" text="Registrarse" textFill="#a85019">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="btnLogin" layoutX="114.0" layoutY="364.0" mnemonicParsing="false" onAction="#sesion" prefHeight="48.0" prefWidth="186.0" style="-fx-background-radius: 40  40;" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="39.0" fitWidth="32.0" layoutX="136.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/entrar.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtPassword" layoutX="101.0" layoutY="295.0" opacity="0.6" prefHeight="25.0" prefWidth="232.0" />
+         </children>
+      </Pane>
+      <Pane prefHeight="500.0" prefWidth="309.0" style="-fx-background-color: #a85019;">
+         <children>
+            <ImageView fitHeight="226.0" fitWidth="232.0" layoutX="46.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="24.0" layoutY="93.0" prefHeight="37.0" prefWidth="270.0" style="-fx-background-color: #f3ac0d; -fx-background-radius: 40 40;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="3.0" text="Tony´s Kinal" textFill="#8f4314">
+                     <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

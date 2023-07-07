@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePlatos" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac178dad-7c26-4bdc-ba34-69bc7d2e90ab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarPlatos;]]>
+	</queryString>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="760" height="79" backcolor="#F3AC0D" uuid="507bbc2e-6c9d-450d-9aa9-e80551d2d327"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="276" y="30" width="99" height="24" uuid="455ffb77-e5fc-4cb1-a70f-bf4324edfa38"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="860" height="61" backcolor="#C1691C" uuid="eb65739b-5b94-40dc-9061-5998e8e27786"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="12" y="24" width="100" height="20" uuid="e27c4391-3e6b-4d1a-a397-2b3930720834"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="24" width="71" height="20" uuid="a275557e-0eae-4996-b25d-6d5d00ce572b"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="24" width="100" height="20" uuid="66aed60c-aa08-4320-840c-f69d70ceee2a"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="24" width="83" height="20" uuid="29712ffb-e4ae-4955-8cc6-4cae4160c495"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="24" width="49" height="20" uuid="fca8d474-a038-4f76-9340-2b1ebabc0f82"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="734" y="24" width="126" height="20" uuid="40b08152-8733-4306-9ff7-a40d9b0c3282"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Tipo Plato]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="860" height="49" backcolor="#F3AC0D" uuid="d4cb5f12-9cd1-4b1f-afdb-2597f44dc64f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="12" y="19" width="100" height="20" uuid="f0dc61a4-ed70-4e95-8545-422c0c85e53b"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="19" width="100" height="20" uuid="b4a83676-9722-4cc2-94d1-107e8010d253"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="19" width="100" height="20" uuid="a3a6243a-7aa3-4c54-a468-2ba748956921"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="19" width="231" height="20" uuid="5b42c188-99a1-4681-b445-b3c9988c9fea"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="635" y="19" width="80" height="20" uuid="98227e6e-eb29-453f-919d-dc105758a845"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precioPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="747" y="19" width="100" height="20" uuid="fa48b86e-f016-4456-b82e-34abb1b75068"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoTipoPlato}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

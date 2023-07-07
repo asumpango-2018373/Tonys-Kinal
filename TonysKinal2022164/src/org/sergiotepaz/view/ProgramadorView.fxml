@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="717.0" style="-fx-background-color: #a85019;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergiotepaz.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="75.0" fitWidth="66.0" layoutX="637.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/kinal.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="69.0" layoutY="151.0" text="Sergio Eduardo Tepaz Vela" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="293.0" text="2022164" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="438.0" text="IN5AV" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="436.0" layoutY="257.0" prefHeight="244.0" prefWidth="250.0" style="-fx-background-color: #f3ac0d;">
+         <children>
+            <ImageView fitHeight="238.0" fitWidth="250.0" opacity="0.1" pickOnBounds="true" style="-fx-opacity: 0.2;">
+               <image>
+                  <Image url="@../image/fondo%20plantilla.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="244.0" fitWidth="210.0" layoutX="43.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Yo.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="24.0" layoutY="20.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/home2.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-31.0" layoutY="88.0" prefHeight="37.0" prefWidth="533.0" style="-fx-background-color: #f3ac0d; -fx-background-radius: 40 40;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="3.0" text="Programador" textFill="#8f4314">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="-17.0" layoutY="232.0" prefHeight="37.0" prefWidth="427.0" style="-fx-background-color: #f3ac0d; -fx-background-radius: 40 40;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="3.0" text="Carné" textFill="#8f4314">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="-31.0" layoutY="379.0" prefHeight="37.0" prefWidth="312.0" style="-fx-background-color: #f3ac0d; -fx-background-radius: 40 40;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="3.0" text="Código Técnico" textFill="#8f4314">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="552.0" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergiotepaz.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="552.0" fitWidth="630.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Menu.png" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="44.0" prefWidth="552.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tablas Has">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProductos_has_Platos" text="Productos - has - Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicios_has_Platos" text="Servicios - has - Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicios_has_Empleados" text="Servicios - has - Empleados" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="54.0" fitWidth="49.0" layoutX="495.0" layoutY="52.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#ventanaLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/out.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

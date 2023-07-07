@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #f29626;" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergiotepaz.controller.Servicios_has_EmpleadosController">
+   <children>
+      <ImageView fitHeight="539.0" fitWidth="1112.0" layoutX="-6.0" layoutY="200.0" pickOnBounds="true" style="-fx-opacity: 0.1;">
+         <image>
+            <Image url="@../image/fondo%20plantilla.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="200.0" prefWidth="1100.0" style="-fx-background-color: #a85019;">
+         <children>
+            <Pane layoutX="12.0" layoutY="75.0" prefHeight="37.0" prefWidth="1077.0" style="-fx-background-color: #f3ac0d; -fx-background-radius: 40 40;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="399.0" layoutY="3.0" text="Servicios - has - Empleados" textFill="#8f4314">
+                     <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox layoutX="170.0" layoutY="141.0" prefHeight="35.0" prefWidth="761.0" spacing="80.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="140.0" styleClass="button1" text="Nuevo" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="140.0" styleClass="button1" text="Eliminar" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="30.0" prefWidth="140.0" styleClass="button1" text="Editar" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="30.0" prefWidth="140.0" styleClass="button1" text="Reporte" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="39.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/reportar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fx:id="imgHome" fitHeight="37.0" fitWidth="55.0" layoutX="14.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/home2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="grpFecha" layoutX="17.0" layoutY="190.0" prefHeight="109.0" prefWidth="1066.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="187.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="189.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="131.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0" prefWidth="183.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="140.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="373.0" minWidth="10.0" prefWidth="234.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="Servicio -  Código Servicio">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="Código Servicio" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="txtServicio_CodigoServicio" editable="false" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label alignment="CENTER" text="Código Empleado" GridPane.columnIndex="4">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER" text="Fecha Evento" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="Hora Evento" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER" text="Lugar Evento" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="cmbCodigoServicio" prefHeight="25.0" prefWidth="187.0" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="cmbCodigoEmpleado" prefHeight="25.0" prefWidth="238.0" GridPane.columnIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <JFXTimePicker fx:id="jfxHoraEvento" defaultColor="BLACK" prefHeight="25.0" prefWidth="184.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </JFXTimePicker>
+            <TextField fx:id="txtLugarEvento" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblServicios_has_Empleados" layoutX="14.0" layoutY="334.0" onMouseClicked="#seleccionarElemento" prefHeight="355.0" prefWidth="1066.0">
+        <columns>
+          <TableColumn fx:id="colServicio_CodigoServicio" prefWidth="196.0" text="Servicios - Código Servicio" />
+          <TableColumn fx:id="colCodigoServicio" prefWidth="163.0" text="Código Servicio" />
+            <TableColumn fx:id="colCodigoEmpleado" prefWidth="183.0" text="Código Empleado" />
+            <TableColumn fx:id="colFechaEvento" prefWidth="175.0" text="Fecha Evento" />
+            <TableColumn fx:id="colHoraEvento" prefWidth="172.0" text="Hora Evento" />
+            <TableColumn fx:id="colLugarEvento" prefWidth="182.0" text="Lugar Evento" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

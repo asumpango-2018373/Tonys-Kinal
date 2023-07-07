@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicios" language="groovy" pageWidth="900" pageHeight="842" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5d66c08e-8c51-4ee7-8192-d74d02d8e2b7">
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarServicios;]]>
+	</queryString>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="860" height="79" backcolor="#F3AC0D" uuid="2087b500-1400-4d7c-a2e2-6e98a6e0751c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="419" y="29" width="99" height="24" uuid="2048a372-87d8-47b2-b8a3-b2e2d8ba725c"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="860" height="61" backcolor="#C1691C" uuid="598523d8-d426-4c8a-934f-d9a656eaeef2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="25" width="100" height="20" uuid="a0576c8b-f2d8-4042-9d6e-ae9b22d40f2f"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="25" width="100" height="20" uuid="e66fe8bd-e5bf-4a09-981c-e5cafe5d28dc"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha del servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="25" width="100" height="20" uuid="ab90bd29-3794-47e8-9213-9a57ff0fbddd"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="25" width="100" height="20" uuid="e6191f8c-07ac-413e-8506-b755be76a142"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora del servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="25" width="114" height="20" uuid="8c3d298a-1158-42bf-9e8e-c9376af4b008"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar del servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="617" y="25" width="121" height="20" uuid="d0926c75-bf6b-442b-bf83-f2c151c6e8f4"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefono de contacto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="748" y="25" width="112" height="20" uuid="78430c75-d856-4f6c-802c-18e91e4370f3"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código de empresa]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="860" height="46" backcolor="#F3AC0D" uuid="8f0f11bc-79b3-4dfc-9bc7-8e3bec88aaf9"/>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="26" width="100" height="20" uuid="2e688bb2-b93f-406a-b97d-6cca02f7a5d6"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="126" y="26" width="100" height="20" uuid="0ee59484-5a57-4ddd-a5f6-5858a96ad994"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="26" width="100" height="20" uuid="85a03257-2fab-456d-bc0a-74be34fdbca1"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="366" y="26" width="100" height="20" uuid="6604bf99-5b2d-4aaa-974b-e888f0e410a7"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="26" width="114" height="20" uuid="67652e51-847d-47bd-88a5-905059b72693"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="617" y="26" width="121" height="20" uuid="6281f0a9-38ce-4e19-9346-0132bba6b9ef"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="748" y="26" width="112" height="20" uuid="210668e8-7398-47d9-8867-6588ffb125af"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
